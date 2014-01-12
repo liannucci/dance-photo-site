@@ -13,8 +13,9 @@ handlers:
   upload: static/index.html
   static_files: static/index.html
 
-- url: .*
-  static_dir: static
+- url: (.*)
+  upload: static/\1
+  static_files: static/\1
 
 libraries:
 - name: webapp2
